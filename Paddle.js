@@ -16,7 +16,7 @@ class Paddle {
         rect(this.x, this.y, 20, 80);
     }
      
-    //TODO limit up down for the paddle
+    //Limit up down for the paddle
     up() {
         if (this.y > 0) {
             this.y -= 2;
@@ -28,5 +28,14 @@ class Paddle {
             this.y += 2;    
         }
     }
+
+    //TODO AI
+    update() {
+        if (this.isUp) {
+          this.up();
+        } else if (this.isDown) {
+          this.down();
+        }
+      }
      
 }

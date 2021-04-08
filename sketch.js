@@ -16,19 +16,39 @@ function draw() {
   playerPaddle.display();
   aiPaddle.display();
  
-  // make the player move according to the flag 
+  //Human paddle
   if (playerPaddle.isUp) {
     playerPaddle.up();
   } else if (playerPaddle.isDown) {
     playerPaddle.down();
   }
 
-  //TODO draw ball
+  //TODO Use AI Paddle
+  playerPaddle.update(); // add this
+  aiPaddle.update();     // and this
+  processAI();   // and add this
+
+
+  //Draw ball
   ball.update()
   ball.display()
 }
 
-//TODO
+//TODO AI Paddle
+function processAI() {
+  let middleOfPaddle = aiPaddle.y + aiPaddle.height / 2;
+     
+  if (middleOfPaddle > ball.y) {
+    aiPaddle.isUp = true;
+    aiPaddle.isDown = false;
+  } else {
+    aiPaddle.isDown = true;
+    aiPaddle.isUp = false;
+ 
+  }
+}
+
+//Remove
 function keyPressed() {
   if (keyCode == UP_ARROW) {
       playerPaddle.isUp = true;
