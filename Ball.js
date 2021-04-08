@@ -38,5 +38,25 @@ class Ball{
         ellipse(this.x, this.y, this.r * 2, this.r * 2);
     }
      
+    //TODO Collision physics
+    hasHitPlayer(player) {
+        if (this.x - this.r <= player.x + player.width && this.x > player.x) {
+          if (this.isSameHeight(player)) {
+            this.xSpeed = -this.xSpeed;
+          }
+        }
+      }
+           
+      hasHitAi(ai) {
+        if (this.x + this.r >= ai.x && this.x <= ai.x + ai.width) {
+          if (this.isSameHeight(ai)) {
+            this.xSpeed = -this.xSpeed;
+          }
+        }
+      }
+               
+      isSameHeight(player) {
+        return this.y >= player.y && this.y <= player.y + player.height
+      }
      
 }
