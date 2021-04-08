@@ -11,4 +11,7 @@ function draw() {
   background(0);
   playerPaddle.display();
   aiPaddle.display();
+   
+  // make that paddle fly!!!
+  playerPaddle.up();
 }
