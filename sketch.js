@@ -34,7 +34,7 @@ function draw() {
   ball.display()
 }
 
-//TODO AI Paddle
+//TODO Define AI Paddle
 function processAI() {
   let middleOfPaddle = aiPaddle.y + aiPaddle.height / 2;
      
