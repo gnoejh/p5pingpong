@@ -1,10 +1,12 @@
 let playerPaddle;
 let aiPaddle;
+let ball;
  
 function setup() {
   createCanvas(624, 351);
   playerPaddle = new Paddle(26);
   aiPaddle = new Paddle(width - 48);
+  ball = new Ball();
 }
  
 // TODO
@@ -20,7 +22,10 @@ function draw() {
   } else if (playerPaddle.isDown) {
     playerPaddle.down();
   }
-     
+
+  //TODO draw ball
+  ball.update()
+  ball.display()
 }
 
 //TODO
