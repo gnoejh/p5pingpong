@@ -23,7 +23,7 @@ function draw() {
      
 }
 
-//TODO
+//TODO Key control
 function keyPressed() {
   if (keyCode == UP_ARROW) {
       playerPaddle.isUp = true;
