@@ -16,13 +16,17 @@ class Paddle {
         rect(this.x, this.y, 20, 80);
     }
      
-    // add these little buggers
+    //TODO limit up down for the paddle
     up() {
-        this.y -= 2;
+        if (this.y > 0) {
+            this.y -= 2;
+        }
     }
      
     down() {
-        this.y += 2;
+        if (this.y < height - this.height) {
+            this.y += 2;    
+        }
     }
      
 }
