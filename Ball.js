@@ -10,8 +10,17 @@ class Ball{
             this.ySpeed = -this.ySpeed;
         } 
         // if it goes to the end of the sreen restart the game
-        if (this.x < this.r || this.x > width - this.r) {
-            this.reset();
+        // if (this.x < this.r || this.x > width - this.r) {
+        //     this.reset();
+        // }
+        //TODO Score
+        if (this.x < 0) {
+          countAI += 1;
+          this.reset();
+        }
+        if (this.x > width){
+          countPlayer += 1;
+          this.reset();
         }
          
         this.x += this.xSpeed;
