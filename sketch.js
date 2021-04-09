@@ -1,6 +1,7 @@
 let playerPaddle;
 let aiPaddle;
 let ball;
+
  
 function setup() {
   createCanvas(624, 351);
@@ -40,6 +41,8 @@ function draw() {
   //TODO half line
   stroke(255); // gives a white stroke
   line(width/2, 0, width/2, height); // draws a line between two points line(x,y,x1,y1)
+
+ 
 }
 
 //TODO AI Paddle
