@@ -1,8 +1,10 @@
 let playerPaddle;
 let aiPaddle;
 let ball;
+//TODO Scores
+let countPlayer = 0;
+let countAI = 0;
 
- 
 function setup() {
   createCanvas(624, 351);
   playerPaddle = new Paddle(26);
@@ -10,7 +12,6 @@ function setup() {
   ball = new Ball();
 }
  
-// TODO
 function draw() {
   background(0);
      
@@ -42,7 +43,11 @@ function draw() {
   stroke(255); // gives a white stroke
   line(width/2, 0, width/2, height); // draws a line between two points line(x,y,x1,y1)
 
- 
+  //TODO Scores
+  text(countPlayer,width/2-60,50)
+  text(countAI,width/2+10,50)
+  textSize(32)
+  
 }
 
 //TODO AI Paddle
