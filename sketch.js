@@ -8,8 +8,7 @@ function setup() {
   aiPaddle = new Paddle(width - 48);
   ball = new Ball();
 }
- 
-// TODO
+
 function draw() {
   background(0);
      
